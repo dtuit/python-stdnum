@@ -1,0 +1,1 @@
+from stdnum.nz import ird
