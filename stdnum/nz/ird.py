@@ -38,7 +38,7 @@ def validate(number):
     num_str = compact(number)
     if not 8 <= len(num_str) <= 9:
         raise InvalidLength()
-    if 10**7 < int(num_str) < 15**7:
+    if 10**7 < int(num_str) < 15*10**7:
 
         if len(num_str) == 8:
             num_str = '0' + num_str
@@ -58,6 +58,6 @@ def is_valid(number):
         return False
 
 if __name__ == "__main__":
-    irds = ['109 682 624','63 178 640', '63-563-803', '123456789']
+    irds = ['109 682 624','63 178 640', '63-563-803', '123456789', '24-882-403']
     y = [is_valid(x) for x in irds]
     print(y)
